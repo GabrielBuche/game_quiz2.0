@@ -1,11 +1,14 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 import Box from '@mui/material/Box';
 import { FormControl, IconButton, OutlinedInput,InputLabel, InputAdornment, Button} from '@mui/material';
 import {Visibility, VisibilityOff, AccountCircle } from '@mui/icons-material';
 import './styles.css'
+
 export function  Register(){
 
+    const navigate = useNavigate();
     const [passwrord, setPassword] = useState('')
     const [userText, setUserText] = useState('')
     const [ showPassword, setShowPassword ] = useState(false)
@@ -61,7 +64,7 @@ export function  Register(){
                 label="Password"
             />
         </FormControl>  
-        <Button >Cadastrar</Button>
+        <Button onClick={()=> {navigate('/register')}}>Cadastrar</Button>
         <Button >voltar</Button>
       </Box>
     </div>

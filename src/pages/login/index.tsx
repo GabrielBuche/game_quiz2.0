@@ -6,9 +6,11 @@ import { FormControl, IconButton, OutlinedInput,InputLabel, InputAdornment, Butt
 import {Visibility, VisibilityOff, AccountCircle } from '@mui/icons-material';
 
 import './styles.css'
+import { useNavigate } from 'react-router-dom';
 
 
 export function Login(){
+  const navigate = useNavigate()
   const [passwrord, setPassword] = useState('')
   const [userText, setUserText] = useState('')
   const [ showPassword, setShowPassword ] = useState(false)
@@ -63,7 +65,7 @@ export function Login(){
                 label="Password"
             />
         </FormControl>  
-        <Button >Entrar</Button>
+        <Button onClick={()=> {navigate('Home')}}>Entrar</Button>
       </Box>
     </div>
   )

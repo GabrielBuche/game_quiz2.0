@@ -1,11 +1,14 @@
 
 
-import { Game } from './pages/game'
+import MainRoutes from './routes'
 import "./styles.css"
+
+
+
 function App() {
   return (
     <body>
-      <Game/>
+      <MainRoutes />
     </body>
    
   )
